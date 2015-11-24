@@ -1,0 +1,208 @@
+#D:\Repo\pma\gui\public\restapi\restapi.json
+
+        "/config/device/{device-name}/transport-service-profile": {
+            "get": {
+                "tags": [
+                    "Config Device"
+                ],
+                "summary": "Retrieves all of the TransportService profiles used by a specific device",
+                "description": "Retrieves all of the TransportService profiles used by a specific device",
+                "operationId": "getAllTransportServiceProfilesUsedBySpecificDevice",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "offset",
+                    "in": "query",
+                    "description": "result offset",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "integer"
+                },{
+                    "name": "limit",
+                    "in": "query",
+                    "description": "result limit",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "integer"
+                },{
+                    "name": "sort",
+                    "in": "query",
+                    "description": "field sort, '+' ascending order; '-' descending order. such as '+name, -address'",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                },{
+                    "name": "fields",
+                    "in": "query",
+                    "description": "return fields.",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                },{
+                    "name": "device-name",
+                    "in": "path",
+                    "description": "Name of Device",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "404": {
+                        "description": "Task queue not found"
+                    }
+                }
+            }
+        },
+        "/config/device/{device-name}/_TEMPLATE_PROFILE_NAME_-profile/{profile-name}": {
+            "get": {
+                "tags": [
+                    "Config Device"
+                ],
+                "summary": "Retrieves a TransportService profile used by a specific device",
+                "description": "Retrieves a TransportService profile used by a specific device",
+                "operationId": "getTransportServiceProfileUsedBySpecificDevice",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "fields",
+                    "in": "query",
+                    "description": "return fields.",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                }, {
+                    "name": "device-name",
+                    "in": "path",
+                    "description": "Name of Device",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "profile-name",
+                    "in": "path",
+                    "description": "Name of TransportService Profile",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "404": {
+                        "description": "TransportService profile not found"
+                    }
+                }
+            }
+        },
+        "/config/profile/_TEMPLATE_PROFILE_NAME_-profile": {
+            "get": {
+                "tags": [
+                    "Config Profile"
+                ],
+                "summary": "Retrieves all of the TransportService profiles ",
+                "description": "Retrieves all of the TransportService profiles",
+                "operationId": "getAllTransportServiceProfiles",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "offset",
+                    "in": "query",
+                    "description": "result offset",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "integer"
+                },{
+                    "name": "limit",
+                    "in": "query",
+                    "description": "result limit",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "integer"
+                },{
+                    "name": "sort",
+                    "in": "query",
+                    "description": "field sort, '+' ascending order; '-' descending order. such as '+name, -address'",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                },{
+                    "name": "fields",
+                    "in": "query",
+                    "description": "return fields. values[name, address, port, tcpOnly, username, state].",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                },{
+                    "name": "filter",
+                    "in": "query",
+                    "description": "query condition, such as : 'region=region1, region2 and profile-name=name1, name2' .",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "404": {
+                        "description": "Task queue not found"
+                    }
+                }
+            }
+        },
+        "/config/profile/_TEMPLATE_PROFILE_NAME_-profile/{profile-name}": {
+            "get": {
+                "tags": [
+                    "Config Profile"
+                ],
+                "summary": "Retrieves specific TransportService profiles ",
+                "description": "Retrieves specific TransportService profiles",
+                "operationId": "getSpecificTransportServiceProfiles",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "offset",
+                    "in": "query",
+                    "description": "result offset",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "integer"
+                },{
+                    "name": "limit",
+                    "in": "query",
+                    "description": "result limit",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "integer"
+                },{
+                    "name": "sort",
+                    "in": "query",
+                    "description": "field sort, '+' ascending order; '-' descending order. such as '+name, -address'",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                },{
+                    "name": "fields",
+                    "in": "query",
+                    "description": "return fields.",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                },{
+                    "name": "filter",
+                    "in": "query",
+                    "description": "query condition, such as : 'region=region1, region2' .",
+                    "required": false,
+                    "displayoptional": true,
+                    "type": "string"
+                },{
+                    "name": "profile-name",
+                    "in": "path",
+                    "description": "Name of TransportService Profile",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "404": {
+                        "description": "TransportService profile not found"
+                    }
+                }
+            }
+        },
+
