@@ -1,0 +1,3 @@
+# Tobe appended to D:\Repo\pma\pmaa\pmaa-dpu\src\main\resources\dpu-service.xml
+
+    <bean id="__PROFILE_VARI__ProfileInventoryRest" class="com.calix.pmaa.dpu.profile.__PROFILE_FOLDER__.__PROFILE_CLASS__ProfileInventoryRest" lazy-init="false" init-method="init" />

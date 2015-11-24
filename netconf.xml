@@ -1,0 +1,12 @@
+<transport-service-profile>
+    <tsp-name>
+        <type>String</type>
+    </tsp-name>
+    <vlan-list>
+        <type>List</type>
+    </vlan-list>
+    <description>
+        <type>String</type>
+    </description>
+</transport-service-profile>
+
